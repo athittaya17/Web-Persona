@@ -1,0 +1,1174 @@
+/* ✅ NAVBAR */
+header {
+  width: 100%;
+  background: #faecf0;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: top 0.35s ease;
+}
+
+/* ซ่อนเวลาเลื่อนลง */
+header.hide {
+  top: -80px; /* ถ้าเมนูสูงกว่า/ต่ำกว่า ปรับตัวเลขนี้ */
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.navbar a {
+  color: #e17b96;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #e17b96;
+}
+
+/* ✅ Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ NEW SECTIONS */
+.about, .services {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.about h2, .services h2 {
+  color: #e17b96;
+  margin-bottom: 15px;
+}
+
+.services ul {
+  list-style: none;
+  padding-top: 10px;
+}
+
+.services li {
+  padding: 5px;
+  color: #555;
+}
+/* รีเซ็ตและฟอนต์ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #fff, #fdf2f6);
+}
+.hero-text { max-width: 500px; }
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #e17b96;
+  }
+.hero-text { max-width: 500px; }
+.hero-text h2 {
+  font-size: 0.8rem;
+  color: #e17b96;
+    }
+.hero-text { max-width: 500px; }
+.hero-text h3 {
+  font-size: 1.5rem;
+  color: #e17b96;
+  
+}
+.hero-text p {
+  margin-top: 15px;
+  color: #555;
+}
+.hero-image img {
+  width: 260px;
+ 
+}
+
+/* PORTFOLIO SECTION */
+.portfolio {
+  text-align: center;
+  padding: 60px 10%;
+}
+.portfolio h2 {
+  font-size: 1.5rem;
+  color: #e17b96;
+  margin-bottom: 40px;
+}
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.work-item {
+  background: #fdf2f6;
+  border: 2px solid #f8cdd8;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+.work-item img {
+  width: 100%;
+  height: 200px; /* ขนาดภาพเท่ากัน */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #f8cdd8;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.work-item:hover img {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+.work-item h3 {
+  color: #e17b96;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 192, 203, 0.2);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+.modal-content {
+  background: #fff;
+  border: 2px solid #f8cdd8;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 90%;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.modal-content img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #f8cdd8;
+  margin-bottom: 20px;
+}
+.modal-content h3 {
+  color: #e17b96;
+  margin-bottom: 10px;
+}
+.modal-content p {
+  text-align: left;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  color: #e17b96;
+  cursor: pointer;
+}
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  color: #e17b96;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.nav-btn:hover { background: #f8cdd8; }
+.prev { left: -60px; }
+.next { right: -60px; }
+
+/* CONTACT SECTION */
+.contact {
+  text-align: center;
+  padding: 60px 10%;
+  background: #fdf2f6;
+  border-top: 2px solid #f8cdd8;
+}
+.contact h2 {
+  color: #e17b96;
+  margin-bottom: 10px;
+}
+.contact p {
+  color: #666;
+  margin-bottom: 25px;
+}
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: #e17b96;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.social-links a:hover {
+  background: #f19cb4;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-image img {
+    margin-bottom: 25px;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icon svg {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s, fill 0.3s;
+}
+
+.social-icon:hover svg {
+  transform: scale(1.2);
+  fill: #f19cb4; /* สีชมพูเข้มเวลา hover */
+}
+/* ===== SKILLS SECTION ===== */
+.skills {
+  text-align: center;
+  padding: 70px 10%;
+  background: #fff;
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+.skill-card {  /* <-- แก้จาก skills-card เป็น skill-card */
+  background: #fdf2f6;
+  border: 2px solid #f8cdd8;
+  border-radius: 18px;
+  padding: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px #e17b96;
+  border-color: #e17b96;
+}
+
+.skill-card h3 {
+  margin-top: 15px;
+  color: #e17b96;
+  font-weight: 600;
+}
+.skills h2 {
+  color: #e17b96;
+}
+.skill-card p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.skill-card .icon {
+  width: 70px;      /* ขยายใหญ่ขึ้น */
+  height: 70px;
+  display: block;   /* ให้แน่ใจว่าเป็น block */
+  margin: 0 auto 15px auto; /* จัดให้อยู่กลาง card และเว้นด้านล่าง */
+  color: #e17b96;
+  stroke-width: 2;  /* สำหรับ SVG ที่ใช้ stroke */
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar.hide {
+  top: -80px; /* ซ่อนขึ้นบน */
+}
+section {
+  scroll-margin-top: 100px; /* เท่าความสูง navbar */
+}
+.navbar a {
+  color: #d87490;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* เมื่อ hover */
+.navbar a:hover {
+  color: #e17b96;
+}
+
+/* ✅ สีตอนเมนูถูกเลือก */
+.navbar a.active {
+  color: #e17b96;
+  border-bottom: 2px solid #e17b96;
+  padding-bottom: 4px;
+}
+section {
+  scroll-margin-top: 120px;
+}
+.contact-logo {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  border: 3px solid #f3d3ea;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease;
+}
+
+.contact-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ลองเพิ่ม effect เวลา hover เพื่อให้มี movement น่ารักๆ */
+.contact-logo:hover {
+  transform: scale(1.07) rotate(2deg);
+}
+/* ===== SKILLS HOVER EFFECT ===== */
+.skill-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) rotate(-1deg); /* ยกขึ้นเล็กน้อย + หมุนเล็กน้อย */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ขยายไอคอนเล็กน้อยเวลา hover */
+.skill-card:hover .icon {
+  transform: scale(1.3) rotate(5deg);
+  transition: transform 0.4s ease;
+}
+.certificates {
+  text-align: center;
+  padding: 60px 10%;
+  background: #fff;
+}
+.certificates h2 {
+  font-size: 1.5rem;
+  color: #e17b96;
+  margin-bottom: 40px;
+}
+.cert-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.cert-item {
+  background: #fdf2f6;
+  border: 2px solid #f8cdd8;
+  border-radius: 15px;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cert-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s, filter 0.3s;
+}
+.cert-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1) blur(0.5px);
+}
+.cert-item h3 {
+  color: #e17b96;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: #ffffff; /* พื้นหลังสีชมพูอ่อน */
+  color: #333;
+}
+
+.cert-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.cert-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #ffc0cb; /* ขอบชมพู */
+}
+.cert-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 192, 203, 0.4);
+}
+.cert-item img {
+  width: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(243, 243, 243, 0.85); /* overlay ชมพูอ่อน */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 650px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(255,192,203,0.6);
+  border: 2px solid #ffc0cb;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+.modal-content img:hover {
+  transform: scale(1.05);
+}
+
+.close-btn {
+  position: absolute;
+  top:10px; right:15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ff69b4;
+  transition: color 0.2s;
+}
+.close-btn:hover { color: #ff1493; }
+
+.nav-btn {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: rgba(255,192,203,0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: background 0.3s;
+}
+.nav-btn:hover { background: rgba(255,105,180,0.7); }
+.prev { left: -25px; }
+.next { right: -25px; }
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+.thumbnails img {
+  width: 60px;
+  cursor: pointer;
+  opacity: 0.6;
+  border-radius: 8px;
+  border: 2px solid #ffc0cb;
+  transition: opacity 0.3s, transform 0.3s, border 0.3s;
+}
+.thumbnails img.active,
+.thumbnails img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border: 2px solid #ff69b4;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.slide-left {
+  animation: slideLeft 0.3s forwards;
+}
+.slide-right {
+  animation: slideRight 0.3s forwards;
+}
+@keyframes slideLeft {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideRight {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+/* ปรับให้ Certificates เท่ากับ Project ME */
+.cert-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ขนาดเดียวกับ work-gallery */
+  gap: 20px;
+  padding: 40px 0;
+}
+/* =========================
+   CERTIFICATE GALLERY
+========================= */
+.cert-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.cert-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.cert-item h4 {
+  margin-top: 10px;
+  color: #e17b96;
+}
+
+.cert-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   MODALS
+========================= */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(252, 241, 244, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #e17b96;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(225,123,150,0.7);
+  border: none;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+}
+
+.nav-btn.prev {
+  left: 10px;
+}
+
+.nav-btn.next {
+  right: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: border 0.3s;
+}
+
+.thumbnails img.active {
+  border-color: #e17b96;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fdf0f4;
+}
+
+.contact-logo img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.contact h2 {
+  color: #e17b96;
+  margin-bottom: 20px;
+}
+
+.contact a.social-icon {
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+
+.contact a.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width:768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.cert-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px 0;
+}
+
+.cert-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff0f5; /* ชมพูอ่อน */
+  box-shadow: 0 8px 20px rgba(225, 123, 150, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(225, 123, 150, 0.3);
+}
+
+.cert-item img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.cert-item:hover img {
+  transform: scale(1.05);
+}
+
+.cert-item h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(225,123,150,0.8);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.cert-item:hover h4 {
+  opacity: 1;
+}
+#certModal .modal-content {
+  max-width: 800px;
+  width: 90%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 16px;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+  box-shadow: 0 10px 40px rgba(225,123,150,0.3);
+}
+
+#certModal .nav-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(225,123,150,0.5);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#certModal .nav-btn:hover {
+  background: rgba(225,123,150,0.8);
+}
+
+#certModal .thumbnails img.active,
+#certModal .thumbnails img:hover {
+  transform: scale(1.1);
+  border: 2px solid #e17b96;
+}
+/* ------------------ Modal Base ------------------ */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: auto;
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  padding: 20px;
+  background: #fff0f5; /* โทนชมพูอ่อน */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* ------------------ Nav Buttons ------------------ */
+.modal-content .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(225, 123, 150, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+/* ปรับให้อยู่ข้างนอก modal content */
+.modal-content .prev {
+  left: -60px; /* อยู่นอก modal */
+}
+
+.modal-content .next {
+  right: -60px; /* อยู่นอก modal */
+}
+
+/* Hover effect */
+.modal-content .nav-btn:hover {
+  background: rgba(243, 180, 197, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Close Button */
+.modal-content .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #e17b96;
+}
+
+/* Thumbnails for Certificates */
+#certThumbnails {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#certThumbnails img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+#certThumbnails img.active,
+#certThumbnails img:hover {
+  border: 2px solid #e17b96;
+  transform: scale(1.05);
+}
+
+/* Animation slide */
+.slide-left {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-right {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+/* CSS */
+.modal .image-container {
+  position: relative;
+  width: 80%;   /* ปรับตาม modal */
+  max-width: 600px;
+  height: 400px; /* คงที่ */
+  margin: auto;
+  overflow: hidden;
+}
+
+.modal .image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* รักษาอัตราส่วนภาพ */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 1;
+}
+/* Overlay ของ Project Modal */
+#workModal {
+  display: none; /* ซ่อนตอนเริ่มต้น */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.95); /* ขาวโปร่งใส */
+}
+
+/* ข้างใน modal */
+#workModal .modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #ffffff; /* สีขาวเต็ม */
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+/* Work Gallery */
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px 0;
+}
+
+.work-item {
+  background: #fff0f5; /* ชมพูอ่อน */
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 6px 20px rgba(225,123,150,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.work-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.work-item h3 {
+  color: #e17b96;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.work-item:hover {
+  transform: translateY(-10px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 15px 40px rgba(225,123,150,0.25);
+}
+
+.work-item:hover img {
+  transform: scale(1.05) rotate(1deg);
+  filter: brightness(1.1);
+}
+
+.work-item:hover h3 {
+  transform: translateY(-3px);
+}
+
+/* Modal */
+#workModal .modal-content {
+  background: #fff0f5;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 850px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(225,123,150,0.3);
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+#workModal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Modal Image Hover */
+#workModal .modal-content img {
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+#workModal .modal-content img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* Modal Nav Buttons */
+#workModal .nav-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(225,123,150,0.6);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#workModal .nav-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+  background: rgba(225,123,150,0.9);
+}
+
+/* Close Button */
+#workModal .close-btn {
+  top: 15px;
+  right: 15px;
+  color: #e17b96;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.3s ease;
+}
+
+#workModal .close-btn:hover {
+  color: #ff1493;
+  transform: scale(1.2);
+}
+/* Modal Overlay */
+#workModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 240, 245, 0.8); /* สีชมพูอ่อนโปร่งแสง */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+#workModal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+#workModal .modal-content {
+  background: #ffffff; /* เปลี่ยนเป็นสีขาว */
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 850px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(225,123,150,0.3);
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+#workModal.show {
+  backdrop-filter: blur(8px); /* เบลอพื้นหลัง */
+  background: rgba(0,0,0,0.4); /* เพิ่มความมืดเล็กน้อย */
+}
+#workModal .modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 850px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(225,123,150,0.3);
+  transform: scale(0.7) rotateX(10deg);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#workModal.show .modal-content {
+  transform: scale(1) rotateX(0deg);
+  opacity: 1;
+}
+#workModal .modal-content img:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: brightness(1.1) drop-shadow(0 10px 20px rgba(225,123,150,0.3));
+}
+#workModal .nav-btn:hover, 
+#workModal .close-btn:hover {
+  transform: scale(1.3) rotate(-5deg);
+  background: linear-gradient(45deg, #ff99c8, #e17b96);
+  color: #fff;
+}
+.work-item:hover {
+  transform: translateY(-10px) scale(1.05) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(225,123,150,0.35);
+}
+.modal-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slide-btn {
+  background: #ff7da0;
+  border: none;
+  padding: 12px 22px;
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.25s ease;
+  box-shadow: 0 3px 10px rgba(255, 0, 100, 0.25);
+}
+
+.slide-btn:hover {
+  background: #ff4c80;
+  transform: translateY(-2px) scale(1.05);
+}
+.cert-item img {
+  width: 100%;      /* เต็ม container */
+  height: 300px;    /* สูงเท่ากับ Project ME */
+  object-fit: cover; /* ครอบเต็ม container */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
